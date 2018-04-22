@@ -1,0 +1,24 @@
+{
+  "name": "ham-tests",
+  "description": "Ham Tests",
+  "private": true,
+  "author": "Brunch",
+  "version": "1.0.0",
+  "repository": "",
+  "scripts": {
+    "start": "brunch watch --server -n",
+    "build": "brunch build --production"
+  },
+  "dependencies": {
+    "hampool": "^1.0.1",
+    "knockout": "^3.4.2"
+  },
+  "devDependencies": {
+    "auto-reload-brunch": "^2",
+    "babel-brunch": "~6.0",
+    "babel-preset-latest": "^6",
+    "brunch": "^2",
+    "clean-css-brunch": "^2",
+    "uglify-js-brunch": "^2"
+  }
+}
