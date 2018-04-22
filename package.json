@@ -21,6 +21,7 @@
     "brunch": "^2",
     "clean-css-brunch": "^2",
     "uglify-js-brunch": "^2",
-    "mocha":"^5.1.1"
+    "mocha": "^5.1.1",
+    "json-brunch": "^1.5.4"
   }
 }
