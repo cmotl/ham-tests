@@ -9,6 +9,13 @@
   <script>require('initialize')</script>
 </head>
 <body>
-  <div id="title" data-bind="text: title">
+  <div id="content"> 
+    <div id="title" data-bind="text: title"></div>
+    <div id="questions">
+
+      <div data-bind="foreach: questions">
+        <div data-bind="text: id"></div>
+      </div>
+    </div>
   </div>
 </body>
