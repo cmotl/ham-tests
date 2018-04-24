@@ -10,11 +10,13 @@
 </head>
 <body>
   <div id="content"> 
-    <div id="title" data-bind="text: title"></div>
     <div id="questions">
 
       <div data-bind="foreach: questions">
-        <div data-bind="text: id"></div>
+        <div data-bind="text: question"></div>
+        <ul data-bind="foreach: answers">
+          <li data-bind="text: $data"></li>
+        </ul>
       </div>
     </div>
   </div>
