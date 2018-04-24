@@ -20,6 +20,7 @@
         </ul>
       </div>
       <button data-bind="click: previous, enable: hasPrevious">previous</button>
+      <span data-bind="text: selectedIndex() + 1"></span> / <span data-bind="text: questions().length"></span>
       <button data-bind="click: next, enable: hasNext">next</button>
     </div>
   </div>
