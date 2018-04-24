@@ -8,13 +8,15 @@
 
 ```
 > ./interactive.sh
-$ npm build
+$ npm update
+$ npm run-script build
 ```
 
 ## Test the app
 
 ```
 > ./interactive.sh
+$ npm update
 $ npm test
 ```
 
@@ -22,6 +24,7 @@ $ npm test
 
 ```
 > ./interactive.sh
+$ npm update
 $ npm start
 ```
 
