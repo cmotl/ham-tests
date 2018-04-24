@@ -11,8 +11,7 @@
 <body>
   <div id="content"> 
     <div id="questions">
-
-      <div data-bind="foreach: questions">
+      <div data-bind="with: selectedQuestion">
         <div data-bind="text: question"></div>
         <ul data-bind="foreach: answers">
           <li>
@@ -20,6 +19,8 @@
           </li>
         </ul>
       </div>
+      <button data-bind="click: previous, enable: hasPrevious">previous</button>
+      <button data-bind="click: next, enable: hasNext">next</button>
     </div>
   </div>
 </body>
