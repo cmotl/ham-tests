@@ -11,6 +11,7 @@
 <body>
   <div id="content"> 
     <div id="questions">
+      <select data-bind="options: sections, selectedOptions: selectedSection"></select>
       <div data-bind="with: selectedQuestion">
         <div data-bind="text: question"></div>
         <ul data-bind="foreach: answers">

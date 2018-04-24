@@ -19,6 +19,11 @@ const acl = (x) => {
   return [x]
 }
 
+const all_sections = () => {
+  return extra_sections.map((s) => s.section )
+}
+
 module.exports = {
-  for_sections: (sections) => questions_for_ids(ids_for_section(acl(sections)))
+  for_sections: (sections) => questions_for_ids(ids_for_section(acl(sections))),
+  all_sections: all_sections
 }

@@ -10,4 +10,9 @@ describe("questions", () => {
     const qs = questions.for_sections(["2.1.1", "3.1.1"])
     assert.ok(qs.length > 0)
   })
+  it("should find all available sections", () => {
+    const sections = questions.all_sections()
+    assert.equal(37, sections.length)
+    console.log(sections)
+  })
 })
