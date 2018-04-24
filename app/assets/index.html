@@ -15,7 +15,9 @@
       <div data-bind="foreach: questions">
         <div data-bind="text: question"></div>
         <ul data-bind="foreach: answers">
-          <li data-bind="text: $data"></li>
+          <li>
+          <span data-bind="text: $data, style: { fontWeight: ($index() == $parent.correct) ? 'bold' : 'normal' }"></span>
+          </li>
         </ul>
       </div>
     </div>
