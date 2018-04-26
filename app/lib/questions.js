@@ -1,5 +1,6 @@
 const extra = require('hampool/extra');
 const extra_sections = require('./sections.json')
+const _ = require('lodash')
 
 const ids_for_section = (sections) => {
   return extra_sections
@@ -24,6 +25,6 @@ const all_sections = () => {
 }
 
 module.exports = {
-  for_sections: (sections) => questions_for_ids(ids_for_section(acl(sections))),
+  for_sections: (sections) => _.shuffle(questions_for_ids(ids_for_section(acl(sections)))),
   all_sections: all_sections
 }

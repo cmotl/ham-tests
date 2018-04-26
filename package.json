@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "hampool": "^1.0.1",
-    "knockout": "^3.4.2"
+    "knockout": "^3.4.2",
+    "lodash": "^4.17.10"
   },
   "devDependencies": {
     "auto-reload-brunch": "^2",
@@ -24,6 +25,7 @@
     "mocha": "^5.1.1",
     "json-brunch": "^1.5.4",
     "jquery": "^1.11.0",
+    "popper.js": "^1.14.0",
     "bootstrap": "^4.1.0"
   }
 }
