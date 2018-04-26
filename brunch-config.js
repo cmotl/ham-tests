@@ -23,6 +23,7 @@ exports.npm = {
     jQuery: 'jquery',
     ko: 'knockout',
     bootstrap: 'bootstrap',
+    _: 'lodash'
   },
   styles: {
     bootstrap: ['dist/css/bootstrap.css']

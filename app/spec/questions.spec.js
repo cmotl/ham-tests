@@ -14,4 +14,10 @@ describe("questions", () => {
     const sections = questions.all_sections()
     assert.equal(37, sections.length)
   })
+  it("should shuffle questions on subsequent calls", () => {
+    const q1 = questions.for_sections("2.1.1")
+    const q2 = questions.for_sections("2.1.1")
+    assert.equal(q1.length, q2.length)
+    assert.notDeepEqual(q1, q2)
+  })
 })
