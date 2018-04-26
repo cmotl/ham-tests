@@ -9,20 +9,34 @@
   <script>require('initialize')</script>
 </head>
 <body>
-  <div id="content"> 
+  <div class="col-sm-2" id="left">
+    <div data-bind="foreach: sections">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" data-bind="checked: $parent.selectedSection, checkedValue: $data">
+          </div>
+        </div>
+        <div class="form-control" data-bind="text: $data"></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-10" id="right">
     <div id="questions">
-      <select data-bind="options: sections, selectedOptions: selectedSection"></select>
       <div data-bind="with: selectedQuestion">
         <div data-bind="text: question"></div>
-        <ul data-bind="foreach: answers">
-          <li>
-          <span data-bind="text: $data, style: { fontWeight: ($index() == $parent.correct) ? 'bold' : 'normal' }"></span>
-          </li>
-        </ul>
+          <ul data-bind="foreach: answers">
+            <li>
+              <span data-bind="text: $data, style: { fontWeight: ($index() == $parent.correct) ? 'bold' : 'normal' }"></span>
+            </li>
+          </ul>
+        </div>
+        <div data-bind="visible: questions().length > 0">
+        <button data-bind="click: previous, enable: hasPrevious">previous</button>
+        <span data-bind="text: selectedIndex() + 1"></span> / <span data-bind="text: questions().length"></span>
+        <button data-bind="click: next, enable: hasNext">next</button>
+        </div>
       </div>
-      <button data-bind="click: previous, enable: hasPrevious">previous</button>
-      <span data-bind="text: selectedIndex() + 1"></span> / <span data-bind="text: questions().length"></span>
-      <button data-bind="click: next, enable: hasNext">next</button>
     </div>
   </div>
 </body>

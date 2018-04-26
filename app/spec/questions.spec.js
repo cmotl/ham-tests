@@ -13,6 +13,5 @@ describe("questions", () => {
   it("should find all available sections", () => {
     const sections = questions.all_sections()
     assert.equal(37, sections.length)
-    console.log(sections)
   })
 })
