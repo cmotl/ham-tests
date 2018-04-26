@@ -1,6 +1,24 @@
-.brunch {
-  font-family: -apple-system, Sans-Serif;
+body, html {
+  margin: 0;
+  overflow: hidden;
+  height:100%;
+}
+#left {
   text-align: center;
-  font-size: 24pt;
-  color: #3f894a;
+  height:100%;
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  left: 0;
+  overflow-y: scroll; 
+}
+
+#right {
+  height:100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 85%;
+  overflow-y: scroll;
 }

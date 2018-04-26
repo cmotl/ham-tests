@@ -6,9 +6,25 @@ exports.files = {
       'app.js': /^app/
     }
   },
-  stylesheets: {joinTo: 'app.css'}
+  stylesheets: {
+    joinTo: 'app.css'
+  }
 };
 
 exports.plugins = {
-  babel: {presets: ['latest']}
+  babel: {
+    presets: ['latest']
+  }
 };
+
+exports.npm = {
+  globals: {
+    $: 'jquery',
+    jQuery: 'jquery',
+    ko: 'knockout',
+    bootstrap: 'bootstrap',
+  },
+  styles: {
+    bootstrap: ['dist/css/bootstrap.css']
+  }
+}

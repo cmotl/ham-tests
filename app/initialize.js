@@ -1,4 +1,3 @@
-var ko = require('knockout')
 var questions = require('lib/questions')
 
 document.addEventListener('DOMContentLoaded', () => {
