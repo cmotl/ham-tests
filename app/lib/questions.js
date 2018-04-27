@@ -1,4 +1,4 @@
-const extra = require('hampool/extra');
+const extra = require('./extra_pool');
 const extra_sections = require('./sections.json')
 const _ = require('lodash')
 
@@ -10,7 +10,7 @@ const ids_for_section = (sections) => {
 }
 
 const questions_for_ids = (ids) => {
-  return extra.questions
+  return extra.pool()
     .filter((q) => ids.includes(q.id))
 }
 
