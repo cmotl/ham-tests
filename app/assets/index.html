@@ -23,13 +23,13 @@
   </div>
   <div class="col-sm-10" id="right">
     <div id="questions">
-      <div data-bind="with: selectedQuestion">
+      <div data-bind="with: selectedQuestion, click: reveal_answer">
         <div data-bind="text: question"></div>
-          <ul data-bind="foreach: answers">
-            <li>
-              <span data-bind="text: text, style: { fontWeight: correct ? 'bold' : 'normal' }"></span>
-            </li>
-          </ul>
+        <ul data-bind="foreach: answers">
+          <li>
+            <span data-bind="text: text, style: { fontWeight: ($parents[1].show_answer() && correct) ? 'bold' : 'normal' }"></span>
+          </li>
+        </ul>
         </div>
         <div data-bind="visible: questions().length > 0">
         <button data-bind="click: previous, enable: hasPrevious">previous</button>
