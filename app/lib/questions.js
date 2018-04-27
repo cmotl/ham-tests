@@ -24,7 +24,13 @@ const all_sections = () => {
   return extra_sections.map((s) => s.section )
 }
 
+const shuffle_answers = (q) => {
+  q.answers = _.shuffle(q.answers)
+  return q
+}
+
+
 module.exports = {
-  for_sections: (sections) => _.shuffle(questions_for_ids(ids_for_section(acl(sections)))),
+  for_sections: (sections) => _.shuffle(questions_for_ids(ids_for_section(acl(sections))).map(shuffle_answers)),
   all_sections: all_sections
 }

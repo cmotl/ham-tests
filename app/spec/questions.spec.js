@@ -20,4 +20,9 @@ describe("questions", () => {
     assert.equal(q1.length, q2.length)
     assert.notDeepEqual(q1, q2)
   })
+  it("should shuffle answers on subsequent calls", () => {
+    const a1 = questions.for_sections("4.1")[0].answers
+    const a2 = questions.for_sections("4.1")[0].answers
+    assert.notDeepEqual(a1, a2)
+  })
 })
