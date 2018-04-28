@@ -10,14 +10,19 @@
 </head>
 <body>
   <div class="col-sm-2" id="left">
-    <div data-bind="foreach: sections">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <div class="input-group-text">
-            <input type="checkbox" data-bind="checked: $parent.selectedSection, checkedValue: $data">
+    <div>
+      <select class="form-control" data-bind="options: availableElements, value: element"></select>
+    </div>
+    <div>
+      <div data-bind="foreach: sections" id="sections">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <input type="checkbox" data-bind="checked: $parent.selectedSection, checkedValue: $data">
+            </div>
           </div>
+          <div class="form-control" data-bind="text: $data"></div>
         </div>
-        <div class="form-control" data-bind="text: $data"></div>
       </div>
     </div>
   </div>

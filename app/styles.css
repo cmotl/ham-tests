@@ -10,7 +10,16 @@ body, html {
   top: 0px;
   bottom: 0;
   left: 0;
+}
+
+#sections {
+  height:100%;
+  position: absolute;
   overflow-y: scroll; 
+  padding-right: 10px;
+  padding-left: 10px;
+  right: 10px;
+  left: 10px;
 }
 
 #right {
