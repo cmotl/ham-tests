@@ -8,15 +8,20 @@ document.addEventListener('DOMContentLoaded', () => {
     questions: ko.observableArray(),
     selectedIndex: ko.observable(),
     show_answer: ko.observable(false),
+    availableElements: ko.observableArray(["technician","general","extra"]),
+    element: ko.observable("extra")
   };
 
   view_model.reveal_answer = () => { view_model.show_answer(true)}
 
   ko.computed(() => {
-    view_model.questions(questions.for_sections(view_model.selectedSection()))
+    view_model.questions(questions(view_model.element()).for_sections(view_model.selectedSection()))
     view_model.selectedIndex(0)
     view_model.show_answer(false)
+    view_model.sections(questions(view_model.element()).all_sections())
   })
+
+  view_model.element.subscribe(console.log)
 
   view_model.show_answer.subscribe(console.log)
   view_model.selectedQuestion = ko.computed(() => {
@@ -42,5 +47,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   view_model.selectedSection.subscribe(console.log)
 
-  view_model.sections(questions.all_sections())
+  view_model.sections(questions(view_model.element()).all_sections())
 });
