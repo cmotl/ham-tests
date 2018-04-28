@@ -1,5 +1,5 @@
 const extra = require('./extra_pool');
-const extra_sections = require('./sections.json')
+const extra_sections = require('./extra-sections.json')
 const _ = require('lodash')
 
 const ids_for_section = (sections) => {
