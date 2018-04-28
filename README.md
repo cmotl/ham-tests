@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/cmotl/ham-tests.svg?branch=master)](https://travis-ci.org/cmotl/ham-tests)
+
 # Ham Tests
 
 ## Purpose
