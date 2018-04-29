@@ -21,9 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
     view_model.sections(questions(view_model.element()).all_sections())
   })
 
-  view_model.element.subscribe(console.log)
-
-  view_model.show_answer.subscribe(console.log)
   view_model.selectedQuestion = ko.computed(() => {
     return view_model.questions()[view_model.selectedIndex()]    
   })
@@ -44,8 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   ko.applyBindings(view_model, document.getElementById("content"))
-
-  view_model.selectedSection.subscribe(console.log)
 
   view_model.sections(questions(view_model.element()).all_sections())
 });
