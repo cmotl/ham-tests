@@ -8,7 +8,8 @@
   "scripts": {
     "start": "brunch watch --server -n",
     "build": "brunch build --production",
-    "test": "mocha app/spec/**/**.spec.js"
+    "test": "mocha app/spec/**/**.spec.js",
+    "postinstall": "brunch build --production"
   },
   "dependencies": {
     "hampool": "^1.0.1",
@@ -26,6 +27,7 @@
     "json-brunch": "^1.5.4",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.0",
-    "bootstrap": "^4.1.0"
+    "bootstrap": "^4.1.0",
+    "http-server": "^0.11.1"
   }
 }
