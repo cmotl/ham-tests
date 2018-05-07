@@ -71,10 +71,15 @@
 {"section":"5.2", "questions":[
   "E6B10","E6B13","E6E01","E6F13","E6F14"
 ]},
-{"section":"5.3", "questions":[
-  "E6A13","E6C03","E6C04","E6C05","E6C06","E6C07","E6C08","E6C09","E6C10","E6C11",
-  "E6C12","E6C13","E6C14","E7A01","E7A02","E7A03","E7A04","E7A05","E7A06","E7A07",
-  "E7A08","E7A09","E7A10","E7A11","E7A12"
+  
+{"section":"5.3.1", "questions":[
+  "E6C03","E6C04","E6C08","E6C10","E6C11","E7A07","E7A08","E7A09","E7A10","E7A11","E7A12"
+]},
+{"section":"5.3.2", "questions":[
+  "E7A01","E7A03","E7A04","E7A05","E7A06"
+]},
+{"section":"5.3.3", "questions":[
+  "E6A13","E6C05","E6C06","E6C07","E6C09","E6C12","E6C13","E6C14","E7A02"
 ]},
 {"section":"5.4", "questions":[
   "E6F01","E6F02","E6F03","E6F04","E6F05","E6F06","E6F07","E6F08","E6F09","E6F10",
