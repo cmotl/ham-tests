@@ -12,7 +12,7 @@ describe("questions", () => {
   })
   it("should find all available sections", () => {
     const sections = questions("extra").all_sections()
-    assert.equal(68, sections.length)
+    assert.equal(70, sections.length)
   })
   it("should shuffle questions on subsequent calls", () => {
     const q1 = questions("extra").for_sections("2.1.1")
