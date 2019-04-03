@@ -9,32 +9,33 @@
   <script>require('initialize')</script>
 </head>
 <body>
-  <div class="col-sm-2" id="left">
-    <div>
-      <select class="form-control" data-bind="options: availableElements, value: element"></select>
-    </div>
-    <div id="sections">
-      <div data-bind="foreach: sections">
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <div class="input-group-text">
-              <input type="checkbox" data-bind="checked: $parent.selectedSection, checkedValue: $data">
+  <div id="content">
+    <div class="col-sm-2" id="left">
+      <div>
+        <select class="form-control" data-bind="options: availableElements, value: element"></select>
+      </div>
+      <div id="sections">
+        <div data-bind="foreach: sections">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="checkbox" data-bind="checked: $parent.selectedSection, checkedValue: $data">
+              </div>
             </div>
+            <div class="form-control" data-bind="text: $data"></div>
           </div>
-          <div class="form-control" data-bind="text: $data"></div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="col-sm-10" id="right">
-    <div id="questions">
-      <div data-bind="with: selectedQuestion, click: reveal_answer">
-        <div data-bind="text: question"></div>
-        <ul data-bind="foreach: answers">
-          <li>
-            <span data-bind="text: text, style: { fontWeight: ($parents[1].show_answer() && correct) ? 'bold' : 'normal' }"></span>
-          </li>
-        </ul>
+    <div class="col-sm-10" id="right">
+      <div id="questions">
+        <div data-bind="with: selectedQuestion, click: reveal_answer">
+          <div data-bind="text: question"></div>
+          <ul data-bind="foreach: answers">
+            <li>
+              <span data-bind="text: text, style: { fontWeight: ($parents[1].show_answer() && correct) ? 'bold' : 'normal' }"></span>
+            </li>
+          </ul>
         </div>
         <div data-bind="visible: questions().length > 0">
         <button data-bind="click: previous, enable: hasPrevious">previous</button>
